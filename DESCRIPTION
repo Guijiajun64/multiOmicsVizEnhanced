@@ -1,0 +1,36 @@
+Package: multiOmicsVizEnhanced
+Title: Enhanced Multi-Omics Correlation and Chromosomal Visualization Toolkit
+Version: 0.1.0
+Description: Provides enhanced multi-omics correlation analysis and chromosome-based
+ visualization. Extends the original 'multiOmicsViz' package with improved
+ ggplot-based heatmaps, customizable aesthetics, simplified single-omics
+ modes, and optimized parallel correlation computation.
+License: LGPL
+URL: {{ URL }}
+Encoding: UTF-8
+Date: 2025-12-04
+LazyData: true
+Depends: 
+    R (>= 4.0)
+Imports: 
+    doParallel,
+    dplyr,
+    foreach,
+    ggplot2,
+    ggpubr,
+    grDevices,
+    parallel,
+    patchwork,
+    stats,
+    SummarizedExperiment,
+    utils
+Suggests: 
+    BiocGenerics
+biocViews: Visualization, Software, SystemsBiology, MultiOmics, GenomeAnnotation, Proteomics, Transcriptomics
+RoxygenNote: 7.3.3
+Authors@R: c(
+    person("Jiajun", "Gui", , "a1074646773@gmail.com", role = c("aut", "cre"),
+           comment = "Maintainer and developer of multiOmicsVizEnhanced"),
+    person("Jing", "Wang", , "jingwang.uestc@gmail.com", role = c("aut", "cph"),
+           comment = "Original author of multiOmicsViz")
+  )
