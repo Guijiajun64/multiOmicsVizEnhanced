@@ -65,6 +65,7 @@ remotes::install_github("Guijiajun64/multiOmicsVizEnhanced")
 
 ## **🔍 Example Usage**
 
+```r
 result <- multiOmicsViz(  sourceOmics        = cna_matrix,
                           
                           sourceOmicsName    = "CNA",
@@ -91,7 +92,7 @@ result <- multiOmicsViz(  sourceOmics        = cna_matrix,
                           point_size   = 0.5
                        )
 
----
+```
 
 ## **📌 Why Use multiOmicsVizEnhanced?**
 
@@ -189,26 +190,35 @@ remotes::install_github("Guijiajun64/multiOmicsVizEnhanced")
 
 
 
+## **🔍 Example Usage**
+
 ```r
-result <- multiOmicsViz(
-  sourceOmics        = cna_matrix,
-  sourceOmicsName    = "CNA",
-  chrome_sourceOmics = "All",
+result <- multiOmicsViz(  sourceOmics        = cna_matrix,
+                          
+                          sourceOmicsName    = "CNA",
+                          
+                          chrome_sourceOmics = "All",
+                        
+                          targetOmicsList    = list(
+                            Protein = protein_matrix,
+                            Phospho = phospho_matrix
+                          ),
+                          
+                          targetOmicsName    = c("Protein", "Phospho"),
+                          
+                          chrome_targetOmics = "All",
+                        
+                          fdrThr       = 0.05,
+                          
+                          outputfile   = "CNA_multiOmics",
+                          
+                          nThreads     = 2,
+                          
+                          legend       = TRUE,
+                          
+                          point_size   = 0.5
+                       )
 
-  targetOmicsList    = list(
-    Protein = protein_matrix,
-    Phospho = phospho_matrix
-  ),
-
-  targetOmicsName    = c("Protein", "Phospho"),
-  chrome_targetOmics = "All",
-
-  fdrThr       = 0.05,
-  outputfile   = "CNA_multiOmics",
-  nThreads     = 2,
-  legend       = TRUE,
-  point_size   = 0.5
-)
 ```
 
 
